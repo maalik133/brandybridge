@@ -1,398 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brandy Melville Rewards</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brandy Melville Rewards</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    body {
-      background: #4f3339;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #111;
-      padding: 0 14px 28px;
-    }
+body{
+background:#4f3339;
+font-family:Arial,Helvetica,sans-serif;
+color:#111;
+padding:0 14px 28px;
+}
 
-    .brand-wrap {
-      text-align: center;
-      padding: 30px 0 22px;
-      background: #fff;
-      width: calc(100% + 28px);
-      margin-left: -14px;
-    }
+.brand-wrap{
+text-align:center;
+padding:30px 0 22px;
+background:#fff;
+width:calc(100% + 28px);
+margin-left:-14px;
+}
 
-    .brand {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 34px;
-      font-weight: 500;
-      color: #211817;
-      letter-spacing: -1px;
-    }
+.brand{
+font-family:Georgia,"Times New Roman",serif;
+font-size:34px;
+font-weight:500;
+color:#211817;
+letter-spacing:-1px;
+}
 
-    .heart {
-      color: #f2d8d5;
-      font-size: 32px;
-      vertical-align: middle;
-      padding: 0 4px;
-    }
+.heart{
+color:#f2d8d5;
+font-size:32px;
+padding:0 4px;
+}
 
-    .container {
-      width: 100%;
-      max-width: 530px;
-      margin: 0 auto;
-      background: #fffaf6;
-      border: 1px solid #d9c7bd;
-      border-radius: 16px;
-      padding: 26px 18px 30px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-    }
+.container{
+width:100%;
+max-width:530px;
+margin:0 auto;
+background:#fffaf6;
+border:1px solid #d9c7bd;
+border-radius:16px;
+padding:26px 18px 30px;
+box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
 
-    h1 {
-      font-size: 28px;
-      line-height: 1.15;
-      text-align: center;
-      margin-bottom: 14px;
-      font-weight: 900;
-      color: #111;
-      letter-spacing: -0.7px;
-    }
+h1{
+font-size:28px;
+line-height:1.15;
+text-align:center;
+margin-bottom:14px;
+font-weight:900;
+color:#111;
+letter-spacing:-.7px;
+}
 
-    .badge {
-      width: fit-content;
-      margin: 0 auto 20px;
-      background: #4f3339;
-      color: #fff;
-      padding: 11px 28px;
-      border-radius: 999px;
-      font-size: 21px;
-      font-weight: 900;
-      box-shadow: 0 8px 18px rgba(79, 51, 57, 0.25);
-    }
+.badge{
+width:fit-content;
+margin:0 auto 20px;
+background:#4f3339;
+color:#fff;
+padding:11px 28px;
+border-radius:999px;
+font-size:21px;
+font-weight:900;
+}
 
-    .subtext {
-      text-align: center;
-      font-size: 16px;
-      line-height: 1.45;
-      color: #333;
-      margin-bottom: 24px;
-    }
+.subtext{
+text-align:center;
+font-size:16px;
+line-height:1.45;
+color:#333;
+margin-bottom:24px;
+}
 
-    .step {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      background: #fff;
-      border: 1px solid #d9c7bd;
-      border-radius: 12px;
-      padding: 18px 16px;
-      margin-bottom: 16px;
-      width: 100%;
-    }
+.step{
+display:flex;
+gap:16px;
+align-items:center;
+background:#fff;
+border:1px solid #d9c7bd;
+border-radius:12px;
+padding:18px 16px;
+margin-bottom:16px;
+}
 
-    .icon {
-      min-width: 38px;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: #111;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: 900;
-      margin-top: 1px;
-    }
+.icon{
+min-width:38px;
+width:38px;
+height:38px;
+border-radius:50%;
+background:#111;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+font-weight:900;
+}
 
-    .info-icon {
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      font-size: 23px;
-      font-weight: 700;
-      padding-right: 2px;
-    }
+.step h3{
+font-size:21px;
+font-weight:900;
+color:#111;
+}
 
-    .step-text {
-      width: 100%;
-    }
+.info-box{
+display:flex;
+gap:16px;
+align-items:flex-start;
+background:#f4e9e3;
+border:1px solid #d9c7bd;
+border-radius:12px;
+padding:18px 16px;
+margin:20px 0 26px;
+}
 
-    .step h3,
-    .info-box h3 {
-      font-size: 21px;
-      margin-bottom: 7px;
-      font-weight: 900;
-      line-height: 1.25;
-      color: #111;
-    }
+.info-icon{
+font-family:Georgia,"Times New Roman",serif;
+font-style:italic;
+font-size:22px;
+}
 
-    .step p,
-    .info-box p {
-      font-size: 16px;
-      line-height: 1.45;
-      color: #333;
-    }
+.info-box h3{
+font-size:21px;
+font-weight:900;
+margin-bottom:8px;
+}
 
-    .info-box {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      background: #f4e9e3;
-      border: 1px solid #d9c7bd;
-      border-radius: 12px;
-      padding: 18px 16px;
-      margin: 20px 0 26px;
-      width: 100%;
-    }
+.info-box p{
+font-size:16px;
+line-height:1.45;
+color:#333;
+}
 
-    .cta {
-      display: block;
-      width: 100%;
-      text-align: center;
-      background: #111;
-      color: white;
-      text-decoration: none;
-      padding: 21px 14px;
-      border-radius: 9px;
-      font-size: 21px;
-      font-weight: 900;
-      margin-top: 8px;
-      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.24);
-      transition: background-color 0.18s ease, transform 0.18s ease;
-      -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
-    }
+.cta{
+display:block;
+width:100%;
+text-align:center;
+background:#111;
+color:#fff;
+text-decoration:none;
+padding:21px 14px;
+border-radius:9px;
+font-size:21px;
+font-weight:900;
+box-shadow:0 12px 26px rgba(0,0,0,.24);
+}
 
-    .cta:hover {
-      background: #4f3339;
-      transform: translateY(-1px);
-    }
+.fine-print{
+text-align:center;
+font-size:14px;
+color:#6d625d;
+margin:16px 0 32px;
+line-height:1.4;
+}
 
-    .cta:active {
-      background: #4f3339;
-      transform: scale(0.985);
-    }
+h2{
+font-size:30px;
+line-height:1.2;
+margin-bottom:18px;
+font-weight:900;
+color:#111;
+}
 
-    .fine-print {
-      text-align: center;
-      font-size: 14px;
-      color: #6d625d;
-      margin: 16px 0 32px;
-      line-height: 1.4;
-    }
+details{
+background:#fff;
+border:1px solid #d9c7bd;
+border-radius:10px;
+padding:18px 14px;
+margin-bottom:12px;
+}
 
-    h2 {
-      font-size: 30px;
-      line-height: 1.2;
-      margin-bottom: 18px;
-      font-weight: 900;
-      color: #111;
-    }
+summary{
+list-style:none;
+cursor:pointer;
+font-size:20px;
+font-weight:900;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#111;
+}
 
-    details {
-      background: #fff;
-      border: 1px solid #d9c7bd;
-      border-radius: 10px;
-      padding: 18px 14px;
-      margin-bottom: 12px;
-      width: 100%;
-    }
+summary::-webkit-details-marker{
+display:none;
+}
 
-    summary {
-      list-style: none;
-      cursor: pointer;
-      font-size: 20px;
-      font-weight: 900;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      line-height: 1.35;
-      color: #111;
-    }
+summary::after{
+content:"+";
+font-size:26px;
+font-weight:900;
+color:#4f3339;
+}
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
+details[open] summary::after{
+content:"-";
+}
 
-    summary::after {
-      content: "+";
-      font-size: 26px;
-      font-weight: 900;
-      flex-shrink: 0;
-      color: #4f3339;
-    }
+details p{
+margin-top:18px;
+font-size:16px;
+line-height:1.45;
+color:#333;
+}
 
-    details[open] summary::after {
-      content: "-";
-    }
+@media(max-width:520px){
 
-    details p {
-      margin-top: 18px;
-      font-size: 16px;
-      line-height: 1.45;
-      color: #333;
-    }
+.brand{
+font-size:30px;
+}
 
-    @media (max-width: 520px) {
-      .brand {
-        font-size: 30px;
-      }
+h1{
+font-size:24px;
+}
 
-      .heart {
-        font-size: 28px;
-      }
+h2{
+font-size:26px;
+}
 
-      h1 {
-        font-size: 24px;
-      }
+.step h3,
+.info-box h3,
+summary{
+font-size:18px;
+}
 
-      h2 {
-        font-size: 26px;
-      }
+.subtext,
+.info-box p,
+details p{
+font-size:15px;
+}
 
-      .container {
-        padding: 22px 14px 28px;
-      }
-
-      .badge {
-        font-size: 19px;
-      }
-
-      .step h3,
-      .info-box h3,
-      summary {
-        font-size: 18px;
-      }
-
-      .step p,
-      .info-box p,
-      details p,
-      .subtext {
-        font-size: 15px;
-      }
-
-      .cta {
-        font-size: 18px;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .brand {
-        font-size: 27px;
-      }
-
-      h1 {
-        font-size: 22px;
-      }
-
-      .container {
-        padding-left: 12px;
-        padding-right: 12px;
-      }
-    }
-  </style>
+.cta{
+font-size:18px;
+}
+}
+</style>
 </head>
 
 <body>
 
-  <div class="brand-wrap">
-    <div class="brand">Brandy <span class="heart">♥</span> Melville</div>
-  </div>
+<div class="brand-wrap">
+<div class="brand">Brandy <span class="heart">♥</span> Melville</div>
+</div>
 
-  <main class="container">
+<main class="container">
 
-    <h1>Discounts + Rewards</h1>
+<h1>Brandy Discounts + Rewards</h1>
 
-    <div class="badge">Up to $750</div>
+<div class="badge">Up to $500</div>
 
-    <p class="subtext">
-      This page explains how people are getting Brandy rewards online.
-    </p>
+<p class="subtext">
+This page explains how people are getting Brandy rewards online.
+</p>
 
-    <section class="step">
-      <div class="icon">✓</div>
-      <div class="step-text">
-        <h3>Enter a valid email</h3>
-        <p>Continue to the next page and submit your email to start.</p>
-      </div>
-    </section>
+<section class="step">
+<div class="icon">✓</div>
+<div class="step-text">
+<h3>Enter a valid email</h3>
+</div>
+</section>
 
-    <section class="step">
-      <div class="icon">✓</div>
-      <div class="step-text">
-        <h3>Complete 4–6 deals</h3>
-        <p>Deals may include surveys, app installs, trial offers, or similar steps.</p>
-      </div>
-    </section>
+<section class="step">
+<div class="icon">✓</div>
+<div class="step-text">
+<h3>Complete 4–6 deals</h3>
+</div>
+</section>
 
-    <section class="step">
-      <div class="icon">✓</div>
-      <div class="step-text">
-        <h3>Receive your reward</h3>
-        <p>After your steps are completed and verified, your reward instructions will be shown.</p>
-      </div>
-    </section>
+<section class="step">
+<div class="icon">✓</div>
+<div class="step-text">
+<h3>Receive your reward</h3>
+</div>
+</section>
 
-    <section class="info-box">
-      <div class="icon info-icon">i</div>
-      <div class="step-text">
-        <h3>What happens next?</h3>
-        <p>
-          You’ll continue to the next page, answer a few quick questions,
-          submit your email, and complete 4–6 deals shown to you.
-        </p>
-      </div>
-    </section>
+<section class="info-box">
+<div class="icon info-icon">i</div>
+<div>
+<h3>What happens next?</h3>
+<p>
+You'll continue to the next page, answer a few quick questions,
+submit your email, and complete 4–6 deals shown to you.
+</p>
+</div>
+</section>
 
-    <a class="cta" href="https://trksy.org/aff_c?offer_id=1234&aff_id=170653">
-      Continue to Next Step →
-    </a>
+<a class="cta" href="https://giftclick.org/aff_c?offer_id=1234&aff_id=170653">
+Continue to Next Step →
+</a>
 
-    <p class="fine-print">
-      Eligibility and completion terms apply.
-    </p>
+<p class="fine-print">
+Eligibility and completion terms apply.
+</p>
 
-    <h2>Frequently Asked Questions</h2>
+<h2>Frequently Asked Questions</h2>
 
-    <details>
-      <summary>How do I get the discount?</summary>
-      <p>
-        Tap the button above, answer a few quick questions, submit your email, and complete the deals shown on the next page.
-      </p>
-    </details>
+<details>
+<summary>How do I get the discount?</summary>
+<p>
+Tap the button above, answer a few quick questions, submit your email, and complete the deals shown on the next page.
+</p>
+</details>
 
-    <details>
-      <summary>How many deals do I have to do?</summary>
-      <p>
-        Most users are shown around 4–6 deals depending on the path shown to them.
-      </p>
-    </details>
+<details>
+<summary>How many deals do I have to do?</summary>
+<p>
+Most users are shown around 4–6 deals depending on the path shown to them.
+</p>
+</details>
 
-    <details>
-      <summary>How long do the deals take?</summary>
-      <p>
-        It depends on the deals shown. Some are quick, while others may take longer.
-      </p>
-    </details>
+<details>
+<summary>When will I receive my reward?</summary>
+<p>
+Once your steps are completed and verified, your reward instructions will be shown based on the offer page.
+</p>
+</details>
 
-    <details>
-      <summary>When will I receive my reward?</summary>
-      <p>
-        Once your steps are completed and verified, your reward instructions will be shown based on the offer page.
-      </p>
-    </details>
+<p class="fine-print">
+This page is not affiliated with, endorsed by, or sponsored by Brandy Melville.
+</p>
 
-    <p class="fine-print">
-      This page is not affiliated with, endorsed by, or sponsored by Brandy Melville.
-    </p>
-
-  </main>
+</main>
 
 </body>
 </html>
