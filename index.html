@@ -13,7 +13,7 @@ box-sizing:border-box;
 }
 
 body{
-background:#4f3339;
+background:#faf7f2;
 font-family:Arial,Helvetica,sans-serif;
 color:#111;
 padding:0 14px 28px;
@@ -25,6 +25,7 @@ padding:30px 0 22px;
 background:#fff;
 width:calc(100% + 28px);
 margin-left:-14px;
+border-bottom:1px solid #eee;
 }
 
 .brand{
@@ -36,7 +37,7 @@ letter-spacing:-1px;
 }
 
 .heart{
-color:#f2d8d5;
+color:#f6c9d2;
 font-size:32px;
 padding:0 4px;
 }
@@ -45,11 +46,12 @@ padding:0 4px;
 width:100%;
 max-width:530px;
 margin:0 auto;
-background:#fffaf6;
-border:1px solid #d9c7bd;
+background:#fff;
+border:1px solid #eee;
 border-radius:16px;
 padding:26px 18px 30px;
-box-shadow:0 12px 30px rgba(0,0,0,.18);
+box-shadow:0 8px 24px rgba(0,0,0,.06);
+margin-top:20px;
 }
 
 h1{
@@ -64,13 +66,20 @@ letter-spacing:-.7px;
 
 .badge{
 width:fit-content;
-margin:0 auto 20px;
-background:#4f3339;
+margin:0 auto 8px;
+background:#211817;
 color:#fff;
 padding:11px 28px;
 border-radius:999px;
 font-size:21px;
 font-weight:900;
+}
+
+.badge-sub{
+text-align:center;
+font-size:14px;
+color:#999;
+margin-bottom:20px;
 }
 
 .subtext{
@@ -81,12 +90,16 @@ color:#333;
 margin-bottom:24px;
 }
 
+.subtext strong{
+color:#111;
+}
+
 .step{
 display:flex;
 gap:16px;
 align-items:center;
-background:#fff;
-border:1px solid #d9c7bd;
+background:#faf7f2;
+border:1px solid #eee;
 border-radius:12px;
 padding:18px 16px;
 margin-bottom:16px;
@@ -97,7 +110,7 @@ min-width:38px;
 width:38px;
 height:38px;
 border-radius:50%;
-background:#111;
+background:#211817;
 color:#fff;
 display:flex;
 align-items:center;
@@ -112,53 +125,65 @@ font-weight:900;
 color:#111;
 }
 
-.info-box{
-display:flex;
-gap:16px;
-align-items:flex-start;
-background:#f4e9e3;
-border:1px solid #d9c7bd;
+.incentive-box{
+background:#fdf0f2;
+border:2px solid #f6c9d2;
 border-radius:12px;
 padding:18px 16px;
 margin:20px 0 26px;
+position:relative;
 }
 
-.info-icon{
-font-family:Georgia,"Times New Roman",serif;
-font-style:italic;
-font-size:22px;
-}
-
-.info-box h3{
-font-size:21px;
+.incentive-tag{
+position:absolute;
+top:-12px;
+left:14px;
+background:#f6c9d2;
+color:#211817;
+font-size:13px;
 font-weight:900;
-margin-bottom:8px;
+padding:4px 12px;
+border-radius:999px;
+letter-spacing:.5px;
+text-transform:uppercase;
 }
 
-.info-box p{
+.incentive-box h3{
+font-size:22px;
+font-weight:900;
+margin:8px 0 8px;
+color:#111;
+}
+
+.incentive-box p{
 font-size:16px;
 line-height:1.45;
 color:#333;
+}
+
+.incentive-box .highlight{
+font-weight:900;
+color:#d6517a;
 }
 
 .cta{
 display:block;
 width:100%;
 text-align:center;
-background:#111;
+background:#211817;
 color:#fff;
 text-decoration:none;
 padding:21px 14px;
 border-radius:9px;
 font-size:21px;
 font-weight:900;
-box-shadow:0 12px 26px rgba(0,0,0,.24);
+box-shadow:0 12px 26px rgba(0,0,0,.16);
 }
 
 .fine-print{
 text-align:center;
 font-size:14px;
-color:#6d625d;
+color:#999;
 margin:16px 0 32px;
 line-height:1.4;
 }
@@ -172,8 +197,8 @@ color:#111;
 }
 
 details{
-background:#fff;
-border:1px solid #d9c7bd;
+background:#faf7f2;
+border:1px solid #eee;
 border-radius:10px;
 padding:18px 14px;
 margin-bottom:12px;
@@ -198,7 +223,7 @@ summary::after{
 content:"+";
 font-size:26px;
 font-weight:900;
-color:#4f3339;
+color:#f6c9d2;
 }
 
 details[open] summary::after{
@@ -255,42 +280,40 @@ font-size:18px;
 
 <h1>Brandy Discounts + Rewards</h1>
 
-<div class="badge">Up to $750</div>
+<div class="badge">Everything for $11</div>
+<p class="badge-sub">+ up to $750 in rewards</p>
 
 <p class="subtext">
-This page explains how people are getting Brandy Melville rewards online.
+Here's how people are getting <strong>every item for $11</strong> right now.
 </p>
 
 <section class="step">
-<div class="icon">✓</div>
+<div class="icon">1</div>
 <div class="step-text">
-<h3>Enter a valid email</h3>
+<h3>Enter your email</h3>
 </div>
 </section>
 
 <section class="step">
-<div class="icon">✓</div>
+<div class="icon">2</div>
 <div class="step-text">
-<h3>Complete 4–6 deals</h3>
+<h3>Complete 4–6 quick deals</h3>
 </div>
 </section>
 
 <section class="step">
-<div class="icon">✓</div>
+<div class="icon">3</div>
 <div class="step-text">
-<h3>Receive your reward</h3>
+<h3>Get your $11 deal</h3>
 </div>
 </section>
 
-<section class="info-box">
-<div class="icon info-icon">i</div>
-<div>
-<h3>What happens next?</h3>
+<section class="incentive-box">
+<span class="incentive-tag">Limited Time</span>
+<h3>Get an extra $250</h3>
 <p>
-You'll continue to the next page, answer a few quick questions,
-submit your email, and complete 4–6 deals shown to you.
+Complete <span class="highlight">6 deals instead of 4</span> and we'll add an extra $250 to your reward. The faster you finish, the better your chances — spots are limited.
 </p>
-</div>
 </section>
 
 <a class="cta" href="https://giftclick.org/aff_c?offer_id=1234&aff_id=170653">
@@ -301,28 +324,29 @@ Continue to Next Step →
 Eligibility and completion terms apply.
 </p>
 
-<h2>Frequently Asked Questions</h2>
+<h2>FAQ</h2>
 
 <details>
-<summary>What are deals?</summary>
+<summary>How do I get the $11 deal?</summary>
 <p>
-Deals are random quick tasks like filling out a form, answering a survey, or testing an app.
+Sign up, then complete the deals shown to unlock it.
 </p>
 </details>
 
 <details>
-<summary>How long do deals take?</summary>
+<summary>How many deals do I need to do?</summary>
 <p>
-It depends on the deals shown. Some are quick, while others may take longer.
+4–6. Completing all of them gets you the full $750 reward.
 </p>
 </details>
 
 <details>
-<summary>When will I receive my reward?</summary>
+<summary>What are the deals?</summary>
 <p>
-Once your steps are completed and verified, your reward instructions will be shown based on the offer page.
+Quick surveys, app installs, or short forms.
 </p>
 </details>
+
 
 <p class="fine-print">
 This page is not affiliated with, endorsed by, or sponsored by Brandy Melville.
