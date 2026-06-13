@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brandy Melville Rewards</title>
+<title>Brandy Melville $750 Gift Card</title>
 
 <style>
 *{
@@ -26,6 +26,10 @@ background:#fff;
 width:calc(100% + 28px);
 margin-left:-14px;
 border-bottom:1px solid #eee;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
 }
 
 .brand{
@@ -37,9 +41,8 @@ letter-spacing:-1px;
 }
 
 .heart{
-color:#f6c9d2;
-font-size:32px;
-padding:0 4px;
+width:30px;
+height:30px;
 }
 
 .container{
@@ -55,73 +58,54 @@ margin-top:20px;
 }
 
 h1{
-font-size:28px;
-line-height:1.15;
+font-size:26px;
+line-height:1.25;
 text-align:center;
-margin-bottom:14px;
+margin-bottom:6px;
 font-weight:900;
 color:#111;
-letter-spacing:-.7px;
 }
 
-.badge{
-width:fit-content;
-margin:0 auto 8px;
-background:#211817;
-color:#fff;
-padding:11px 28px;
-border-radius:999px;
-font-size:21px;
-font-weight:900;
-}
-
-.badge-sub{
-text-align:center;
-font-size:14px;
-color:#999;
-margin-bottom:20px;
+h1 .amount{
+color:#d6517a;
 }
 
 .subtext{
 text-align:center;
-font-size:16px;
-line-height:1.45;
-color:#333;
+font-size:15px;
+color:#888;
 margin-bottom:24px;
-}
-
-.subtext strong{
-color:#111;
 }
 
 .step{
 display:flex;
-gap:16px;
+gap:14px;
 align-items:center;
-background:#faf7f2;
-border:1px solid #eee;
-border-radius:12px;
-padding:18px 16px;
-margin-bottom:16px;
+padding:14px 4px;
+border-bottom:1px solid #f0ede7;
+}
+
+.step:last-of-type{
+border-bottom:none;
 }
 
 .icon{
-min-width:38px;
-width:38px;
-height:38px;
+min-width:32px;
+width:32px;
+height:32px;
 border-radius:50%;
 background:#211817;
 color:#fff;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:22px;
+font-size:16px;
 font-weight:900;
 }
 
 .step h3{
-font-size:21px;
-font-weight:900;
+font-size:18px;
+font-weight:700;
 color:#111;
 }
 
@@ -130,7 +114,7 @@ background:#fdf0f2;
 border:2px solid #f6c9d2;
 border-radius:12px;
 padding:18px 16px;
-margin:20px 0 26px;
+margin:22px 0 16px;
 position:relative;
 }
 
@@ -140,30 +124,30 @@ top:-12px;
 left:14px;
 background:#f6c9d2;
 color:#211817;
-font-size:13px;
+font-size:12px;
 font-weight:900;
 padding:4px 12px;
-border-radius:999px;
+border-radius:6px;
 letter-spacing:.5px;
 text-transform:uppercase;
 }
 
 .incentive-box h3{
-font-size:22px;
+font-size:19px;
 font-weight:900;
-margin:8px 0 8px;
+margin:6px 0 6px;
 color:#111;
 }
 
 .incentive-box p{
-font-size:16px;
+font-size:15px;
 line-height:1.45;
 color:#333;
 }
 
-.incentive-box .highlight{
-font-weight:900;
+.incentive-box p strong{
 color:#d6517a;
+font-weight:900;
 }
 
 .cta{
@@ -173,99 +157,132 @@ text-align:center;
 background:#211817;
 color:#fff;
 text-decoration:none;
-padding:21px 14px;
+padding:18px 14px;
 border-radius:9px;
-font-size:21px;
+font-size:19px;
 font-weight:900;
-box-shadow:0 12px 26px rgba(0,0,0,.16);
 }
 
 .fine-print{
 text-align:center;
-font-size:14px;
+font-size:13px;
 color:#999;
-margin:16px 0 32px;
+margin:14px 0 28px;
 line-height:1.4;
 }
 
-h2{
-font-size:30px;
-line-height:1.2;
-margin-bottom:18px;
-font-weight:900;
-color:#111;
+.trustpilot{
+text-align:center;
+padding:18px 0;
+border-top:1px solid #f0ede7;
+border-bottom:1px solid #f0ede7;
+margin-bottom:24px;
 }
 
-details{
-background:#faf7f2;
-border:1px solid #eee;
-border-radius:10px;
-padding:18px 14px;
-margin-bottom:12px;
-}
-
-summary{
-list-style:none;
-cursor:pointer;
-font-size:20px;
-font-weight:900;
+.tp-logo{
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:center;
+gap:6px;
+margin-bottom:8px;
+}
+
+.tp-logo svg{
+width:20px;
+height:20px;
+}
+
+.tp-logo span{
+font-size:19px;
+font-weight:700;
+color:#000;
+letter-spacing:0px;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+.tp-row{
+display:flex;
+justify-content:center;
+gap:4px;
+margin-bottom:6px;
+}
+
+.tp-square{
+width:24px;
+height:24px;
+flex-shrink:0;
+border-radius:3px;
+background:#00b67a;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+position:relative;
+}
+
+.tp-square.half{
+background:linear-gradient(to right, #00b67a 50%, #dcdce6 50%);
+}
+
+.tp-square svg{
+width:14px;
+height:14px;
+fill:#fff;
+position:relative;
+z-index:1;
+}
+
+.tp-score{
+font-size:13px;
+color:#888;
+}
+
+.tp-score strong{
 color:#111;
 }
 
-summary::-webkit-details-marker{
-display:none;
+.footer-links{
+text-align:center;
+font-size:13px;
+color:#999;
+margin:14px 0 6px;
 }
 
-summary::after{
-content:"+";
-font-size:26px;
-font-weight:900;
-color:#f6c9d2;
+.footer-links a{
+color:#999;
+text-decoration:none;
+margin:0 8px;
 }
 
-details[open] summary::after{
-content:"-";
-}
-
-details p{
-margin-top:18px;
-font-size:16px;
-line-height:1.45;
-color:#333;
-}
-
-@media(max-width:520px){
-
-.brand{
-font-size:30px;
-}
-
-h1{
-font-size:24px;
+.copyright{
+text-align:center;
+font-size:12px;
+color:#bbb;
+margin-bottom:14px;
 }
 
 h2{
-font-size:26px;
+font-size:22px;
+margin-bottom:14px;
+font-weight:900;
+color:#111;
 }
 
-.step h3,
-.info-box h3,
-summary{
-font-size:18px;
+.faq-item{
+margin-bottom:18px;
 }
 
-.subtext,
-.info-box p,
-details p{
-font-size:15px;
+.faq-item h3{
+font-size:17px;
+font-weight:900;
+margin-bottom:6px;
+color:#111;
 }
 
-.cta{
-font-size:18px;
-}
+.faq-item p{
+font-size:14px;
+line-height:1.5;
+color:#555;
 }
 </style>
 </head>
@@ -273,83 +290,107 @@ font-size:18px;
 <body>
 
 <div class="brand-wrap">
-<div class="brand">Brandy <span class="heart">♥</span> Melville</div>
+<svg class="heart" viewBox="0 0 32 32" fill="#f6c9d2" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 28C16 28 2 19.5 2 11.5C2 6.8 5.6 3 10 3C12.6 3 14.8 4.3 16 6.3C17.2 4.3 19.4 3 22 3C26.4 3 30 6.8 30 11.5C30 19.5 16 28 16 28Z"/>
+</svg>
+<div class="brand">Brandy Melville</div>
 </div>
 
 <main class="container">
 
-<h1>Brandy Discounts + Rewards</h1>
-
-<div class="badge">Everything for $11</div>
-<p class="badge-sub">+ up to $750 in rewards</p>
-
-<p class="subtext">
-Here's how people are getting <strong>every item for $11</strong> right now.
-</p>
+<h1>Claim Your <span class="amount">$750</span> Brandy Melville Gift Card</h1>
+<p class="subtext">Complete the steps below to unlock your reward</p>
 
 <section class="step">
 <div class="icon">1</div>
 <div class="step-text">
-<h3>Enter your email</h3>
+<h3>Click "Continue to Next Step"</h3>
 </div>
 </section>
 
 <section class="step">
 <div class="icon">2</div>
 <div class="step-text">
-<h3>Complete 4–6 quick deals</h3>
+<h3>Enter your email</h3>
 </div>
 </section>
 
 <section class="step">
 <div class="icon">3</div>
 <div class="step-text">
-<h3>Get your $11 deal</h3>
+<h3>Complete 4–6 quick deals</h3>
+</div>
+</section>
+
+<section class="step">
+<div class="icon">4</div>
+<div class="step-text">
+<h3>Claim your $750 gift card</h3>
 </div>
 </section>
 
 <section class="incentive-box">
-<span class="incentive-tag">Limited Time</span>
-<h3>Get an extra $250</h3>
+<span class="incentive-tag">Today Only</span>
+<h3>Finish today for $250 more</h3>
 <p>
-Complete <span class="highlight">6 deals instead of 4</span> and we'll add an extra $250 to your reward. The faster you finish, the better your chances — spots are limited.
+Complete <strong>6 deals</strong> today instead of 4 and we'll add an extra <strong>$250</strong> to your reward. Coming back later means you might miss this.
 </p>
 </section>
 
-<a class="cta" href="https://giftclick.org/aff_c?offer_id=1234&aff_id=170653">
+<a class="cta" href="https://linkthem.net/aff_c?offer_id=1234&aff_id=170653&source=brandytestlander1">
 Continue to Next Step →
 </a>
 
-<p class="fine-print">
-Eligibility and completion terms apply.
-</p>
+<div class="trustpilot">
+<div class="tp-logo">
+<svg viewBox="0 0 24 24" fill="#00b67a" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+<span>Trustpilot</span>
+</div>
+<div class="tp-row">
+<div class="tp-square">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+</div>
+<div class="tp-square">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+</div>
+<div class="tp-square">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+</div>
+<div class="tp-square">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+</div>
+<div class="tp-square half">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.227 16.67l2.19 6.742-7.413-5.388 5.223-1.354zM24 9.31h-9.165L12.005.589l-2.84 8.723L0 9.3l7.422 5.397-2.84 8.714 7.422-5.388 4.583-3.326L24 9.311z"/></svg>
+</div>
+</div>
+<div class="tp-score"><strong>4.5</strong> out of 5 based on <span style="color:#00b67a;font-weight:700;">7,983 reviews</span></div>
+</div>
 
 <h2>FAQ</h2>
 
-<details>
-<summary>How do I get the $11 deal?</summary>
+<div class="faq-item">
+<h3>What are deals?</h3>
 <p>
-Sign up, then complete the deals shown to unlock it.
+Deals are simple tasks you complete to earn rewards. This could be downloading an app, completing a survey, or signing up for a trial subscription using the links provided. Each deal has specific steps — once you complete it, you'll earn a reward.
 </p>
-</details>
+</div>
 
-<details>
-<summary>How many deals do I need to do?</summary>
+<div class="faq-item">
+<h3>How many deals do I need to complete?</h3>
 <p>
-4–6. Completing all of them gets you the full $750 reward.
+To qualify for your gift card, you'll need to complete 4–6 deals to unlock the full $750 value. Make sure you finish all the required deals from start to finish — the more you complete, the closer you get to your full reward.
 </p>
-</details>
-
-<details>
-<summary>What are the deals?</summary>
-<p>
-Quick surveys, app installs, or short forms.
-</p>
-</details>
-
+</div>
 
 <p class="fine-print">
 This page is not affiliated with, endorsed by, or sponsored by Brandy Melville.
+</p>
+
+<p class="footer-links">
+<a href="https://linkthem.net/aff_c?offer_id=1234&aff_id=170653&source=brandytestlander1">Terms of Service</a> · <a href="https://linkthem.net/aff_c?offer_id=1234&aff_id=170653&source=brandytestlander1">Privacy Policy</a> · <a href="https://linkthem.net/aff_c?offer_id=1234&aff_id=170653&source=brandytestlander1">Contact</a>
+</p>
+<p class="copyright">
+© 2026 All rights reserved.
 </p>
 
 </main>
